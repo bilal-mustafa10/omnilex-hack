@@ -1,0 +1,174 @@
+{
+  "caseId": "CHE-2026-0417",
+  "client": {
+    "name": "Sara Meier",
+    "email": "sara.meier@gmail.com",
+    "location": "Zürich"
+  },
+  "opponent": {
+    "name": "TechCorp AG",
+    "location": "Zürich",
+    "counsel": "Brunner & Partner Rechtsanwälte"
+  },
+  "status": "assessment_complete",
+  "caseType": "employment",
+  "intakeTimestamp": "2026-07-10T23:12:00+02:00",
+  "facts": {
+    "employmentStart": "2023-05-01",
+    "role": "Senior Product Designer",
+    "monthlySalaryGrossCHF": 7800,
+    "noticePeriodMonths": 2,
+    "sickLeaveStart": "2026-06-15",
+    "sickLeaveCertified": true,
+    "terminationLetterDated": "2026-06-26",
+    "terminationReceived": "2026-06-26",
+    "sickDayAtTermination": 12,
+    "serviceYearsAtTermination": 3.15,
+    "unpaidOvertimeHours": 89,
+    "referenceLetterIssued": false
+  },
+  "claims": [
+    {
+      "id": "claim-336c",
+      "title": "Termination void — protected period",
+      "statute": "Art. 336c para. 1(b) & para. 2 OR",
+      "finding": "Termination was served on day 12 of a medically certified incapacity. In the 2nd–5th year of service the protected period is 90 days. Notice served during a protected period is VOID (nichtig) — the employment relationship legally continues.",
+      "valueCHF": 15600,
+      "valueBasis": "Wage continuation claim, 2 months' gross salary (conservative)",
+      "confidence": "high",
+      "deterministic": true,
+      "citations": [
+        {
+          "ref": "BGE 134 III 354",
+          "holding": "Notice given during the Art. 336c protected period is void and produces no legal effect.",
+          "source": "Omnilex",
+          "verified": true
+        },
+        {
+          "ref": "Art. 336c OR (Fedlex SR 220)",
+          "holding": "Protected period during illness: 30 days (1st year), 90 days (years 2–5), 180 days (from year 6).",
+          "source": "Statute",
+          "verified": true
+        },
+        {
+          "ref": "BGer 4A_117/2021",
+          "holding": "Employer bears consequences of void notice; wage claim persists during continued employment.",
+          "source": "Omnilex",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "claim-overtime",
+      "title": "Unpaid overtime",
+      "statute": "Art. 321c para. 3 OR",
+      "finding": "89 documented overtime hours, never compensated in time or money. Statutory rate: hourly wage + 25% supplement unless validly waived in writing. Contract contains no valid waiver clause.",
+      "valueCHF": 4000,
+      "valueBasis": "89h × CHF 45.00 × 1.25 ≈ CHF 5,006; claimed conservatively at CHF 4,000 net of disputed hours",
+      "confidence": "medium",
+      "deterministic": false,
+      "citations": [
+        {
+          "ref": "BGE 129 III 171",
+          "holding": "Overtime compensation: 25% supplement applies absent valid written agreement to the contrary.",
+          "source": "Omnilex",
+          "verified": false
+        },
+        {
+          "ref": "Art. 321c OR (Fedlex SR 220)",
+          "holding": "Statutory overtime compensation regime.",
+          "source": "Statute",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "claim-zeugnis",
+      "title": "Reference letter (Arbeitszeugnis) not issued",
+      "statute": "Art. 330a OR",
+      "finding": "Employee has an unconditional statutory right to a full, benevolent and truthful reference letter at any time. None was issued. Courts assign this claim a dispute value of approximately one month's salary.",
+      "valueCHF": 3800,
+      "valueBasis": "Dispute value convention: ~½–1 monthly salary (Zurich court practice)",
+      "confidence": "high",
+      "deterministic": true,
+      "citations": [
+        {
+          "ref": "Zurich Courts fee guidance (gerichte-zh.ch)",
+          "holding": "Rule of thumb: reference letter claim = 1 monthly salary dispute value.",
+          "source": "Court guidance",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "totalClaimCHF": 23400,
+  "deadlines": [
+    {
+      "label": "Written objection to employer (Art. 336b OR)",
+      "due": "2026-08-31",
+      "note": "Must be received before end of notice period. Firm dispatches within 48h.",
+      "severity": "high",
+      "ownedByFirm": true
+    },
+    {
+      "label": "Conciliation request filing window",
+      "due": "2026-09-15",
+      "note": "Target filing date if employer does not respond to demand letter.",
+      "severity": "medium",
+      "ownedByFirm": true
+    }
+  ],
+  "options": [
+    {
+      "id": "accept",
+      "label": "Accept employer's offer",
+      "moneyCHF": 8000,
+      "moneyNote": "Offered in termination meeting",
+      "timeMonths": 0,
+      "timeNote": "Resolved today",
+      "stressScore": 1,
+      "stressNote": "Sign and move on",
+      "riskNote": "You waive all further claims",
+      "scores": { "money": 34, "time": 100, "peace": 100 }
+    },
+    {
+      "id": "conciliate",
+      "label": "Settle at conciliation",
+      "moneyCHF": 16500,
+      "moneyRange": [15000, 18000],
+      "moneyNote": "Estimated range — based on statutory claim values and published outcome rates",
+      "timeMonths": 2,
+      "timeNote": "Hearing typically within ~2 months. Free procedure.",
+      "stressScore": 3,
+      "stressNote": "One hearing, in person — fully rehearsed with the firm",
+      "riskNote": "~60% of claims resolve here (cantonal data)",
+      "scores": { "money": 71, "time": 75, "peace": 70 }
+    },
+    {
+      "id": "litigate",
+      "label": "Proceed to labour court",
+      "moneyCHF": 23400,
+      "moneyNote": "Full claim value",
+      "timeMonths": 12,
+      "timeNote": "8–18 months incl. conciliation stage",
+      "stressScore": 8,
+      "stressNote": "Extended proceedings, possible appeal",
+      "riskNote": "No court fees under CHF 30k — but if you lose, you pay the employer's legal costs",
+      "scores": { "money": 100, "time": 20, "peace": 15 }
+    }
+  ],
+  "recommendationTemplates": {
+    "accept": "Given how strongly you value closure, accepting ends this today — but you'd be waiving CHF 15,400 of well-founded claims. We flag this for a human consultation before you sign.",
+    "conciliate": "Given your preference, conciliation is your optimal exit: roughly 70% of the claim value, in 8% of the time a court fight takes, with one rehearsed hearing.",
+    "litigate": "Given your priority on full recovery, court maximizes expected value — your void-termination claim is strong. Expect 8–18 months and prepare for the long game."
+  },
+  "prewrittenMemo": "LEGAL ASSESSMENT MEMORANDUM\n\nRe: Meier v. TechCorp AG — Termination during protected period\n\nI. SUMMARY\nThe termination served on 26 June 2026 is void under Art. 336c para. 1(b) OR. Ms Meier was on day 12 of a medically certified incapacity; in her fourth year of service the law grants a 90-day protected period. Notice served within it produces no legal effect (BGE 134 III 354). The employment relationship therefore legally continues, grounding a wage-continuation claim conservatively valued at two months' gross salary (CHF 15,600).\n\nII. SECONDARY CLAIMS\n(1) Overtime, Art. 321c OR: 89 documented hours, no valid written waiver; claim CHF 4,000 (conservative). (2) Reference letter, Art. 330a OR: unconditional entitlement; none issued; dispute value per Zurich practice ~CHF 3,800.\n\nIII. TOTAL & PROCEDURE\nTotal claim: CHF 23,400 — within the simplified, cost-free procedure (< CHF 30,000, Art. 113/114 ZPO). Mandatory conciliation applies; hearings are typically scheduled within two months. Cantonal data indicate ~60% of employment claims resolve at conciliation; prepared claimants settle at materially higher rates.\n\nIV. RECOMMENDED STRATEGY\nDispatch written objection (Art. 336b OR) and demand letter within 48 hours. Absent settlement, file conciliation request by 15 September 2026. Client to be prepared via hearing rehearsal (personal appearance mandatory, Art. 204 ZPO).\n\nAll findings cited to sources retrieved via Omnilex. Subject to review and signature by supervising counsel.",
+  "auditLog": [
+    { "ts": "2026-07-10T23:12:00", "actor": "system", "event": "Documents received via client upload (3 files)" },
+    { "ts": "2026-07-10T23:12:41", "actor": "ai", "event": "Facts extracted: tenure 3.15y, sick day 12, salary CHF 7,800" },
+    { "ts": "2026-07-10T23:13:02", "actor": "ai", "event": "Rule check Art. 336c: protected period 90d — termination VOID (deterministic)" },
+    { "ts": "2026-07-10T23:13:29", "actor": "ai", "event": "Precedent retrieved via Omnilex: 3 sources, confidence high" },
+    { "ts": "2026-07-10T23:14:05", "actor": "ai", "event": "Claims valued: CHF 23,400 total. Deadlines computed and calendared" },
+    { "ts": "2026-07-11T09:02:00", "actor": "system", "event": "Case queued for supervising counsel review" }
+  ]
+}
